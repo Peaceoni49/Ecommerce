@@ -45,13 +45,14 @@ function Details() {
                          {/*bottoms*/}
                          <div>
                              <Link to="/">
-                            <ButtonContainer>Back to ProductConsumer
+                            <ButtonContainer>Back to Products
                             </ButtonContainer>
                             </Link>
                             <ButtonContainer 
                             disabled={inCart?true:false}
                             onClick={()=>{
                                 value.addToCart(id);
+                                value.openModal(id);
                             }}>
                                 {inCart ? "inCart" : "add to cart"}
                             </ButtonContainer>
